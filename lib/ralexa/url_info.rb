@@ -41,17 +41,17 @@ module Ralexa
 
     def speed_median_load_time
       document.at("//UrlInfoResult/Alexa/ContentData/Speed/MedianLoadTime") &&
-        document.at("//UrlInfoResult/Alexa/ContentData/Speed/MedianLoadTime").text.to_i
+        document.at("//UrlInfoResult/Alexa/ContentData/Speed/MedianLoadTime").text.to_f
     end
 
     def speed_load_percentile
       document.at("//UrlInfoResult/Alexa/ContentData/Speed/Percentile") &&
-        document.at("//UrlInfoResult/Alexa/ContentData/Speed/Percentile").text.to_i
+        document.at("//UrlInfoResult/Alexa/ContentData/Speed/Percentile").text.to_f
     end
 
     def link_count
       document.at("//UrlInfoResult/Alexa/ContentData/LinksInCount") &&
-        document.at("//UrlInfoResult/Alexa/ContentData/LinksInCount").text.to_i
+        document.at("//UrlInfoResult/Alexa/ContentData/LinksInCount").text.to_f
     end
 
     def ranking
@@ -76,42 +76,42 @@ module Ralexa
 
     def reach_per_million
       document.at("//UrlInfoResult/Alexa/TrafficData/UsageStatistics/UsageStatistic/Reach/PerMillion/Value") &&
-        document.at("//UrlInfoResult/Alexa/TrafficData/UsageStatistics/UsageStatistic/Reach/PerMillion/Value").text.gsub(',','').to_i
+        document.at("//UrlInfoResult/Alexa/TrafficData/UsageStatistics/UsageStatistic/Reach/PerMillion/Value").text.gsub(',','').to_f
     end
 
     def reach_per_million_delta
       document.at("//UrlInfoResult/Alexa/TrafficData/UsageStatistics/UsageStatistic/Reach/PerMillion/Delta") &&
-        document.at("//UrlInfoResult/Alexa/TrafficData/UsageStatistics/UsageStatistic/Reach/PerMillion/Delta").text.to_i
+        document.at("//UrlInfoResult/Alexa/TrafficData/UsageStatistics/UsageStatistic/Reach/PerMillion/Delta").text.to_f
     end
 
     def page_views_rank
       document.at("//UrlInfoResult/Alexa/TrafficData/UsageStatistics/UsageStatistic/PageViews/Rank/Value") &&
-        document.at("//UrlInfoResult/Alexa/TrafficData/UsageStatistics/UsageStatistic/PageViews/Rank/Value").text.to_i
+        document.at("//UrlInfoResult/Alexa/TrafficData/UsageStatistics/UsageStatistic/PageViews/Rank/Value").text.to_f
     end
 
     def page_views_rank_delta
       document.at("//UrlInfoResult/Alexa/TrafficData/UsageStatistics/UsageStatistic/PageViews/Rank/Delta") &&
-        document.at("//UrlInfoResult/Alexa/TrafficData/UsageStatistics/UsageStatistic/PageViews/Rank/Delta").text.to_i
+        document.at("//UrlInfoResult/Alexa/TrafficData/UsageStatistics/UsageStatistic/PageViews/Rank/Delta").text.to_f
     end
 
     def page_views_per_million
       document.at("//UrlInfoResult/Alexa/TrafficData/UsageStatistics/UsageStatistic/PageViews/PerMillion/Value") &&
-        document.at("//UrlInfoResult/Alexa/TrafficData/UsageStatistics/UsageStatistic/PageViews/PerMillion/Value").text.to_i
+        document.at("//UrlInfoResult/Alexa/TrafficData/UsageStatistics/UsageStatistic/PageViews/PerMillion/Value").text.to_f
     end
 
     def page_views_per_million_delta
       document.at("//UrlInfoResult/Alexa/TrafficData/UsageStatistics/UsageStatistic/PageViews/PerMillion/Delta") &&
-        document.at("//UrlInfoResult/Alexa/TrafficData/UsageStatistics/UsageStatistic/PageViews/PerMillion/Delta").text.to_i
+        document.at("//UrlInfoResult/Alexa/TrafficData/UsageStatistics/UsageStatistic/PageViews/PerMillion/Delta").text.to_f
     end
 
     def page_views_per_user
       document.at("//UrlInfoResult/Alexa/TrafficData/UsageStatistics/UsageStatistic/PageViews/PerUser/Value") &&
-        document.at("//UrlInfoResult/Alexa/TrafficData/UsageStatistics/UsageStatistic/PageViews/PerUser/Value").text.to_i
+        document.at("//UrlInfoResult/Alexa/TrafficData/UsageStatistics/UsageStatistic/PageViews/PerUser/Value").text.to_f
     end
 
     def page_views_per_user_delta
       document.at("//UrlInfoResult/Alexa/TrafficData/UsageStatistics/UsageStatistic/PageViews/PerUser/Delta") &&
-        document.at("//UrlInfoResult/Alexa/TrafficData/UsageStatistics/UsageStatistic/PageViews/PerUser/Delta").text.to_i
+        document.at("//UrlInfoResult/Alexa/TrafficData/UsageStatistics/UsageStatistic/PageViews/PerUser/Delta").text.to_f
     end
   end
 end
