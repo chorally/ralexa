@@ -35,7 +35,7 @@ module Ralexa
 
     attr_accessor :document
 
-    def host; "awis.amazonaws.com" end
+    def host; "awis.us-west-1.amazonaws.com" end
     def path; "/" end
     def default_params; {"Action" => "UrlInfo"}; end
 

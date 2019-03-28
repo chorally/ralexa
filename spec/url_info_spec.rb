@@ -16,7 +16,7 @@ module Ralexa
 
       before do
         client.expect :get, fixture("rank.xml"),
-          ["awis.amazonaws.com", "/", expected_params]
+          ["awis.us-west-1.amazonaws.com", "/", expected_params]
       end
 
       it "fetches, parses, and returns the site's rank" do
@@ -36,7 +36,7 @@ module Ralexa
 
       before do
         client.expect :get, fixture("rank.xml"),
-          ["awis.amazonaws.com", "/", expected_params]
+          ["awis.us-west-1.amazonaws.com", "/", expected_params]
       end
 
       it "returns the alexa speed median load time in the result" do
